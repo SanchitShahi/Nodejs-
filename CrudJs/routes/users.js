@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
-    mobileNo: req.body.mobileNo,
+    password: req.body.password,
   });
 
   //Saving the user details in database

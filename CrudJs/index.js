@@ -1,6 +1,8 @@
 const express=require('express');
 const userRouter=require('./routes/users');
 const mongoose=require('mongoose');
+const passwordReset=require("./routes/passwordReset");
+require("dotenv").config();
 
 
 
@@ -18,6 +20,7 @@ con.on('open', ()=>{
 app.use(express.json());
 
 app.use('/users',userRouter);
+app.use('/password-reset',passwordReset);
 
 
 app.get('/',function(req,res){
